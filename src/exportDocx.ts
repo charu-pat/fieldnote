@@ -93,7 +93,7 @@ export function buildDocxDocument(cv: CVData): Document {
           basedOn: "Normal",
           next: "Normal",
           quickFormat: true,
-          run: { size: docxSize(CV_DOCUMENT.titleSize), color: "63806B" },
+          run: { size: docxSize(CV_DOCUMENT.titleSize), color: "5F7A66" },
           paragraph: { spacing: { after: twips(2) } },
         },
         {

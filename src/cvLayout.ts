@@ -89,7 +89,7 @@ export function layoutCV(cv: CVData, pageWidthPx: number, measurer?: TextMeasure
     header.push({ kind, text, lines: kind === "rule" ? [] : wrap(text, size, bold, contentWidthPx), size, bold, color, afterMm });
   };
   addHeader("name", cv.header.name, CV_DOCUMENT.nameSize, true, "1D2720", 2);
-  addHeader("title", cv.header.title, CV_DOCUMENT.titleSize, false, "63806B", 2);
+  addHeader("title", cv.header.title, CV_DOCUMENT.titleSize, false, "5F7A66", 2);
   addHeader("contact", contactLine(cv.header), CV_DOCUMENT.contactSize, false, "626C63", 2);
   if (header.length) addHeader("rule", " ", 0, false, "E8EBE6", 6);
 

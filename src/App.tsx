@@ -268,7 +268,7 @@ function DraftItem({ item, sectionId, subsectionId, index, total, marker, onEdit
     setEditing(false);
   };
   return (
-    <div ref={setNodeRef} data-cv-item-id={item.id} className={`draft-item ${item.type} ${isDragging ? "is-dragging" : ""} ${marker ? `marker-${marker}` : ""}`}>
+    <div ref={setNodeRef} role="listitem" data-cv-item-id={item.id} className={`draft-item ${item.type} ${isDragging ? "is-dragging" : ""} ${marker ? `marker-${marker}` : ""}`}>
       <button className="draft-grip" aria-label={`Reorder ${item.text}`} {...listeners} {...attributes}>
         <GripVertical size={15} />
       </button>
@@ -350,7 +350,7 @@ function CVSubsection({ sectionId, subsection, hasItems, isDropTarget, onRename,
 }) {
   const dropRef = useGroupDropRef(sectionId, subsection.id);
   return (
-    <div ref={dropRef} className={`cv-subsection ${isDropTarget ? "drop-target" : ""}`}>
+    <div ref={dropRef} role="listitem" className={`cv-subsection ${isDropTarget ? "drop-target" : ""}`}>
       <div className="subsection-heading">
         <CommitInput aria-label={`Subsection name: ${subsection.title}`} value={subsection.title} onCommit={(draft) => !!draft.trim() && onRename(draft.trim())} />
         <CommitInput aria-label={`Dates for ${subsection.title}`} placeholder="Dates (e.g. 2020–2023)" value={subsection.dates} onCommit={(draft) => onDatesChange(draft.trim())} />
